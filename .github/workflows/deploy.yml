@@ -22,6 +22,7 @@ jobs:
 
       - name: ?? Build Docker Image
         run: |
+          cd vite-project
           docker build -t piyushchopade/harry-potter-app:${{ github.run_number }} .
           docker tag piyushchopade/harry-potter-app:${{ github.run_number }} piyushchopade/harry-potter-app:latest
 
